@@ -8,24 +8,24 @@ public class Doctor {
     private Long doctor_id;
 
     @NotNull(message = "Doctor doctor_name cannot be null")
-    @Size(min = 3, max = 100, message = "Doctor doctor_name must be between 3 and 100 characters")
+    @Size(min = 3, max = 100)
     private String doctor_name;
 
     @NotNull(message = "Specialty cannot be null")
-    @Size(min = 3, max = 50, message = "Specialty must be between 3 and 50 characters")
+    @Size(min = 3, max = 50)
     private String doctor_specialty;
 
     @NotNull(message = "Email cannot be null")
-    @Email(message = "Invalid email format")
+    @Email
     private String doctor_email;
 
     @NotNull(message = "Password cannot be null")
-    @Size(min = 6, message = "Password must be at least 6 characters long")
+    @Size(min = 6)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String doctor_password;
 
     @NotNull(message = "Phone number cannot be null")
-    @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be exactly 10 digits")
+    @Pattern(regexp = "^[0-9]{10}$")
     private String doctor_phone;
 
     @ElementCollection
