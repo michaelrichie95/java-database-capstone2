@@ -47,7 +47,7 @@ public class Doctor {
         return doctor_id;
     }
 
-    public void setId(Long id) {
+    public void setId(Long doctor_id) {
         this.doctor_id= doctor_id;
     }
 
