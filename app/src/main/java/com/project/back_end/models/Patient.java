@@ -35,7 +35,7 @@ public class Patient {
     private String patient_password;
 
     @NotNull(message = "Phone number cannot be null")
-    @Pattern(regexp = "^[0-9]{10}$")
+    @Pattern(regexp = "\\d{10}")
     private String patient_phone;
 
     @NotNull(message = "Address cannot be null")

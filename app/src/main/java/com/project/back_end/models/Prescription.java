@@ -6,7 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-@Document
+@@Document(collection = "prescriptions")
+
 public class Prescription {
 
     @Id
@@ -24,6 +25,7 @@ public class Prescription {
     private String medication;
 
     @NotNull(message = "Dosage cannot be null")
+    @Size(min = 3, max = 20)
     private String dosage;
 
     @Size(max = 200)
