@@ -16,6 +16,7 @@ import jakarta.validation.constraints.Size;
 import java.util.List;
 
 @Entity
+@Table(name = "patient")
 public class Patient {
 
     @Id

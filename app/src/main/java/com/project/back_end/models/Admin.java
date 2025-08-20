@@ -8,6 +8,7 @@ import jakarta.persistence.Id;                      // For @Id
 import jakarta.validation.constraints.NotNull;      // For @NotNull
 
 @Entity
+@Table(name = "admin")
 public class Admin {
 
     @Id
