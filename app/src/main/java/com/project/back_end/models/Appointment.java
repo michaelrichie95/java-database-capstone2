@@ -1,5 +1,19 @@
 package com.project.back_end.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Transient;
+
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 @Entity
 public class Appointment {
 
@@ -44,7 +58,7 @@ public class Appointment {
 
     @Transient
     public LocalTime getAppointmentTimeOnly() {
-        return appointmentTime.toLocalTime();
+        return appointment_time.toLocalTime();
     }
 
     public Long getId() {
