@@ -1,11 +1,12 @@
 package com.project.back_end.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;  // For @JsonProperty
-import jakarta.persistence.Entity;                  // For @Entity
-import jakarta.persistence.GeneratedValue;          // For @GeneratedValue
-import jakarta.persistence.GenerationType;          // For GenerationType.IDENTITY
-import jakarta.persistence.Id;                      // For @Id
-import jakarta.validation.constraints.NotNull;      // For @NotNull
+import com.fasterxml.jackson.annotation.JsonProperty; 
+import jakarta.persistence.Entity;                
+import jakarta.persistence.Table;
+import jakarta.persistence.GeneratedValue;          
+import jakarta.persistence.GenerationType;         
+import jakarta.persistence.Id;                      
+import jakarta.validation.constraints.NotNull;     
 
 @Entity
 @Table(name = "admin")
